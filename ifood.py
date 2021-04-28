@@ -6,7 +6,7 @@ restaurantes = [["Sukiya - Saúde", 4.6, 7.99],
                 ["Makis Place - Saúde", 4.7, 7.99],
                 ["Viena - Shopping Santa Cruz", 4.4, 12.49]]
 
-# Cria lista para armazenar as notas do restaurante
+# Cria lista para armazenar as notas dos restaurantes
 lista_notas = []
 
 # Percorre a lista de restaurantes e armazena as notas em uma lista independente
@@ -31,7 +31,7 @@ while len(lista_notas) > 0:
 
 # Percorre a lista ordenada por notas começando do segundo item
 for x in range(1,len(restaurantes_por_notas)):  
-# Compara a nota do segundo item da lista com a do primeiro, se ambas as notas forem iguais,
+# Compara a nota do segundo item atual da lista com a do primeiro, se ambas as notas forem iguais,
 # lidará com o critério de desempate: o frete
  if restaurantes_por_notas[x][1] == restaurantes_por_notas[x-1][1]:
    # Verifica se o valor do frete do segundo termo é menor que a do anterior
@@ -44,6 +44,7 @@ for x in range(1,len(restaurantes_por_notas)):
      # Substitui a posição anterior com o restaurante de menor frete 
      restaurantes_por_notas[x] = restaurante
 
+# Imprime o ranking de restaurantes
 for x in range(len(restaurantes_por_notas)):
     print("{}° {} | Nota: {} | Valor do Frete: R$ {}".format(x+1,restaurantes_por_notas[x][0],restaurantes_por_notas[x][1],restaurantes_por_notas[x][2]))
     
