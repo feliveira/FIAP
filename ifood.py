@@ -34,7 +34,7 @@ for x in range(1,len(restaurantes_por_notas)):
 # Compara a nota do segundo item atual da lista com a do primeiro, se ambas as notas forem iguais,
 # lidará com o critério de desempate: o frete
  if restaurantes_por_notas[x][1] == restaurantes_por_notas[x-1][1]:
-   # Verifica se o valor do frete do segundo termo é menor que a do anterior
+   # Verifica se o valor do frete do segundo termo é menor que o do anterior
    if restaurantes_por_notas[x][2] < restaurantes_por_notas[x-1][2]:
      # Se a condição for verdadeira utiliza a variável "restaurante" para realizar as trocas de posições
      # Salva o restaurante de frete menor
@@ -45,7 +45,8 @@ for x in range(1,len(restaurantes_por_notas)):
      restaurantes_por_notas[x] = restaurante
 
 # Imprime o ranking de restaurantes
+print("\nO ranking dos restaurantes próximos ao endereço de entrega seguindo os critérios de avaliação e valor do frete foi:\n")
+
 for x in range(len(restaurantes_por_notas)):
     print("{}° {} | Nota: {} | Valor do Frete: R$ {}".format(x+1,restaurantes_por_notas[x][0],restaurantes_por_notas[x][1],restaurantes_por_notas[x][2]))
     
-
