@@ -37,11 +37,11 @@ for x in range(1,len(restaurantes_por_notas)):
    # Verifica se o valor do frete do segundo termo é menor que o do anterior
    if restaurantes_por_notas[x][2] < restaurantes_por_notas[x-1][2]:
      # Se a condição for verdadeira utiliza a variável "restaurante" para realizar as trocas de posições
-     # Salva o restaurante de frete menor
+     # Salva o restaurante de frete maior
      restaurante = restaurantes_por_notas[x-1]
-     # Coloca o restaurante de maior frete na posição seguinte
+     # Coloca o restaurante de menor frete na posição anterior
      restaurantes_por_notas[x-1] = restaurantes_por_notas[x]
-     # Substitui a posição anterior com o restaurante de menor frete 
+     # Substitui a segunda posição com o restaurante de maior frete 
      restaurantes_por_notas[x] = restaurante
 
 # Imprime o ranking de restaurantes
